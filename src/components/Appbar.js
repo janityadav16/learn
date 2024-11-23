@@ -16,24 +16,23 @@ import AdbIcon from '@mui/icons-material/Adb';
 const pages = ['Products', 'Pricing', 'Blog'];
 const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
 
-function ResponsiveAppBar() {
-    const [navAnchorEl, setNavAnchorEl] = React.useState(null);
-    const [userAnchorEl, setUserAnchorEl] = React.useState(null);
+function Appbar() {
+    const [anchorElNav, setAnchorElNav] = React.useState(null);
+    const [anchorElUser, setAnchorElUser] = React.useState(null);
 
-    const handleNavMenuOpen = (event) => {
-        setNavAnchorEl(event.currentTarget);
+    const handleOpenNavMenu = (event) => {
+        setAnchorElNav(event.currentTarget);
+    };
+    const handleOpenUserMenu = (event) => {
+        setAnchorElUser(event.currentTarget);
     };
 
-    const handleUserMenuOpen = (event) => {
-        setUserAnchorEl(event.currentTarget);
+    const handleCloseNavMenu = () => {
+        setAnchorElNav(null);
     };
 
-    const handleNavMenuClose = () => {
-        setNavAnchorEl(null);
-    };
-
-    const handleUserMenuClose = () => {
-        setUserAnchorEl(null);
+    const handleCloseUserMenu = () => {
+        setAnchorElUser(null);
     };
 
     return (
@@ -62,17 +61,17 @@ function ResponsiveAppBar() {
                     <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
                         <IconButton
                             size="large"
-                            aria-label="open navigation menu"
-                            aria-controls="nav-menu"
+                            aria-label="account of current user"
+                            aria-controls="menu-appbar"
                             aria-haspopup="true"
-                            onClick={handleNavMenuOpen}
+                            onClick={handleOpenNavMenu}
                             color="inherit"
                         >
                             <MenuIcon />
                         </IconButton>
                         <Menu
-                            id="nav-menu"
-                            anchorEl={navAnchorEl}
+                            id="menu-appbar"
+                            anchorEl={anchorElNav}
                             anchorOrigin={{
                                 vertical: 'bottom',
                                 horizontal: 'left',
@@ -82,12 +81,12 @@ function ResponsiveAppBar() {
                                 vertical: 'top',
                                 horizontal: 'left',
                             }}
-                            open={Boolean(navAnchorEl)}
-                            onClose={handleNavMenuClose}
+                            open={Boolean(anchorElNav)}
+                            onClose={handleCloseNavMenu}
                             sx={{ display: { xs: 'block', md: 'none' } }}
                         >
                             {pages.map((page) => (
-                                <MenuItem key={page} onClick={handleNavMenuClose}>
+                                <MenuItem key={page} onClick={handleCloseNavMenu}>
                                     <Typography sx={{ textAlign: 'center' }}>{page}</Typography>
                                 </MenuItem>
                             ))}
@@ -116,7 +115,7 @@ function ResponsiveAppBar() {
                         {pages.map((page) => (
                             <Button
                                 key={page}
-                                onClick={handleNavMenuClose}
+                                onClick={handleCloseNavMenu}
                                 sx={{ my: 2, color: 'white', display: 'block' }}
                             >
                                 {page}
@@ -125,14 +124,14 @@ function ResponsiveAppBar() {
                     </Box>
                     <Box sx={{ flexGrow: 0 }}>
                         <Tooltip title="Open settings">
-                            <IconButton onClick={handleUserMenuOpen} sx={{ p: 0 }}>
+                            <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
                                 <Avatar alt="Remy Sharp" src="/static/images/avatar/2.jpg" />
                             </IconButton>
                         </Tooltip>
                         <Menu
                             sx={{ mt: '45px' }}
-                            id="user-menu"
-                            anchorEl={userAnchorEl}
+                            id="menu-appbar"
+                            anchorEl={anchorElUser}
                             anchorOrigin={{
                                 vertical: 'top',
                                 horizontal: 'right',
@@ -142,11 +141,11 @@ function ResponsiveAppBar() {
                                 vertical: 'top',
                                 horizontal: 'right',
                             }}
-                            open={Boolean(userAnchorEl)}
-                            onClose={handleUserMenuClose}
+                            open={Boolean(anchorElUser)}
+                            onClose={handleCloseUserMenu}
                         >
                             {settings.map((setting) => (
-                                <MenuItem key={setting} onClick={handleUserMenuClose}>
+                                <MenuItem key={setting} onClick={handleCloseUserMenu}>
                                     <Typography sx={{ textAlign: 'center' }}>{setting}</Typography>
                                 </MenuItem>
                             ))}
@@ -157,4 +156,4 @@ function ResponsiveAppBar() {
         </AppBar>
     );
 }
-export default ResponsiveAppBar;
+export default Appbar;
