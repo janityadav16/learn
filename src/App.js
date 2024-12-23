@@ -3,6 +3,7 @@ import logo from './logo.svg';
 import './App.css';
 import Appbar from './components/Appbar';
 import Header from './components/header';
+import Cards from './components/cards';
 
 function App() {
   return (
@@ -26,6 +27,9 @@ function App() {
       <Header>
 
       </Header>
+      <Cards>
+
+      </Cards>
     </div>
   );
 }
