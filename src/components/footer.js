@@ -1,5 +1,5 @@
 import React from 'react';
-import { Box, Typography, Container, Link } from '@mui/material';
+import { Box, Typography, Container } from '@mui/material';
 
 function Footer() {
     return (
@@ -14,16 +14,8 @@ function Footer() {
             }}
         >
             <Container maxWidth="sm">
-                <Typography variant="body1">
-                    My sticky footer can be found here.
-                </Typography>
                 <Typography variant="body2" color="text.secondary" align="center">
-                    {'Copyright © '}
-                    <Link color="inherit" href="https://mui.com/">
-                        Your Website
-                    </Link>{' '}
-                    {new Date().getFullYear()}
-                    {'.'}
+                    Copyright &copy; {new Date().getFullYear()} My Website
                 </Typography>
             </Container>
         </Box>
@@ -31,3 +23,4 @@ function Footer() {
 }
 
 export default Footer;
+
