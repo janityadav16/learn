@@ -4,6 +4,7 @@ import './App.css';
 import Appbar from './components/Appbar';
 import Header from './components/header';
 import Cards from './components/cards';
+import Gallery from './components/gallery';
 
 function App() {
   return (
@@ -30,6 +31,9 @@ function App() {
       <Cards>
 
       </Cards>
+      <Gallery>
+
+      </Gallery>
     </div>
   );
 }
