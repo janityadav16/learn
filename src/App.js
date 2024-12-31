@@ -32,9 +32,7 @@ function App() {
       <Cards>
 
       </Cards>
-      <Gallery>
 
-      </Gallery>
       <Footer>
 
       </Footer>
