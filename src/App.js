@@ -29,9 +29,7 @@ function App() {
       <Header>
 
       </Header>
-      <Cards>
 
-      </Cards>
 
       <Footer>
 
