@@ -25,16 +25,17 @@ function App() {
             Learn React
           </a>
         </header>
+
+
       </Appbar>
       <Header>
-
       </Header>
 
 
       <Footer>
 
       </Footer>
-    </div>
+    </div >
   );
 }
 
