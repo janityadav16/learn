@@ -30,7 +30,7 @@ function App() {
       </Appbar>
       <Header>
       </Header>
-
+      <Cards></Cards>
 
       <Footer>
 
