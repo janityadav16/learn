@@ -6,6 +6,7 @@ import Header from './components/header';
 import Cards from './components/cards';
 import Gallery from './components/gallery';
 import Footer from './components/footer';
+import Contact from './components/contact';
 
 function App() {
   return (
@@ -32,6 +33,7 @@ function App() {
       </Header>
       <Cards></Cards>
       <Gallery></Gallery>
+      <Contact></Contact>
       <Footer>
 
       </Footer>
