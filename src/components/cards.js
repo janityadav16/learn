@@ -2,12 +2,13 @@ import React from 'react';
 import { Card, CardMedia, CardContent, Typography, Grid } from '@mui/material';
 import { styled } from '@mui/system';
 
-const StyledCard = styled(Card)({
+const StyledCard = styled(Card)(({ theme }) => ({
     transition: 'transform 0.3s ease-in-out',
     '&:hover': {
         transform: 'scale(1.05)',
+        boxShadow: theme.shadows[20],
     },
-});
+}));
 
 const cardsData = [
     {
@@ -55,3 +56,4 @@ function Cards() {
 }
 
 export default Cards;
+
