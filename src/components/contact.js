@@ -12,7 +12,7 @@ const Contact = () => {
                 <Grid container spacing={2}>
                     <Grid item xs={12} md={6}>
                         <Typography variant="h4" gutterBottom>
-                            Contact
+                            Contact Information
                         </Typography>
                         <List>
                             <ListItem>
@@ -28,19 +28,14 @@ const Contact = () => {
                     </Grid>
                     <Grid item xs={12} md={6}>
                         <Typography variant="h4" gutterBottom>
-                            Information
+                            About Us
                         </Typography>
-                        <List>
-                            <ListItem>
-                                <ListItemText primary="Vestibulum id ligula porta felis euismod semper." />
-                            </ListItem>
-                            <ListItem>
-                                <ListItemText primary="Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus." />
-                            </ListItem>
-                            <ListItem>
-                                <ListItemText primary="Cras justo odio, dapibus ac facilisis in, egestas eget quam." />
-                            </ListItem>
-                        </List>
+                        <Typography variant="body1" gutterBottom>
+                            Vestibulum id ligula porta felis euismod semper. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+                        </Typography>
+                        <Typography variant="body1" gutterBottom>
+                            Cras justo odio, dapibus ac facilisis in, egestas eget quam. Cras justo odio, dapibus ac facilisis in, egestas eget quam.
+                        </Typography>
                     </Grid>
                 </Grid>
             </Container>
