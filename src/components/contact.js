@@ -10,7 +10,7 @@ const Contact = () => {
         >
             <Container maxWidth="md">
                 <Grid container spacing={2}>
-                    <Grid item xs={12} md={6}>
+                    <Grid item xs={12} md={8}>
                         <Typography variant="h4" gutterBottom>
                             Contact Information
                         </Typography>
