@@ -1,3 +1,5 @@
+import { Grid } from '@mui/material';
+
 const images = [
     'https://via.placeholder.com/300',
     'https://via.placeholder.com/300',
@@ -11,25 +13,13 @@ const images = [
 
 const Gallery = () => (
     <Grid container spacing={2}>
-        <Grid item xs={12}>
-            <Grid container justify="center" spacing={2}>
-                {images.slice(0, 4).map((image, index) => (
-                    <Grid item key={index}>
-                        <img src={image} alt="gallery" className="gallery-image" />
-                    </Grid>
-                ))}
+        {images.map((image, index) => (
+            <Grid item key={index} xs={12} sm={6} md={4}>
+                <img src={image} alt="gallery" className="gallery-image" />
             </Grid>
-        </Grid>
-        <Grid item xs={12}>
-            <Grid container justify="center" spacing={2}>
-                {images.slice(4, 8).map((image, index) => (
-                    <Grid item key={index}>
-                        <img src={image} alt="gallery" className="gallery-image" />
-                    </Grid>
-                ))}
-            </Grid>
-        </Grid>
+        ))}
     </Grid>
 )
 
 export default Gallery
+
