@@ -1,5 +1,5 @@
 import React from 'react';
-import { Box, Typography, Container } from '@mui/material';
+import { Box, Typography, Container, Link } from '@mui/material';
 
 function Footer() {
     return (
@@ -15,7 +15,10 @@ function Footer() {
         >
             <Container maxWidth="sm">
                 <Typography variant="body2" color="text.secondary" align="center">
-                    Copyright &copy; {new Date().getFullYear()} My Website
+                    Copyright &copy; {new Date().getFullYear()}{' '}
+                    <Link color="inherit" href="https://github.com/">
+                        My Website
+                    </Link>
                 </Typography>
             </Container>
         </Box>
